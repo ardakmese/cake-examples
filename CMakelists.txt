@@ -1,0 +1,42 @@
+cmake_minimum_required(VERSION 3.5)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_BUILD_TYPE Debug)
+
+project( foo
+  VERSION 1.0
+  LANGUAGES CXX
+)
+
+set(foo_SOURCES
+# sources
+)
+set(foo_HEADERS
+# headers
+)
+
+
+include_directories("src/include/")
+
+add_library(fooLib STATIC
+    ${${PROJECT_NAME}_SOURCES}
+    ${${PROJECT_NAME}_HEADERS}
+)
+
+add_executable(fooExec main.cpp
+    ${${PROJECT_NAME}_SOURCES}
+    ${${PROJECT_NAME}_HEADERS}
+)
+
+#important to link executable from library
+target_link_libraries(fooExec foolib)
+
+#adding static 3rdparty library
+
+target_link_directories(fooLib PUBLIC "3rdPartyLib library path")
+
+target_link_libraries(fooLib PUBLIC 3rdPartyLib)
+
+target_include_directories(fooLib PUBLIC "Lib include path")
+
+
