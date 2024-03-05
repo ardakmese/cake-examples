@@ -40,3 +40,6 @@ target_link_libraries(fooLib PUBLIC 3rdPartyLib)
 target_include_directories(fooLib PUBLIC "Lib include path")
 
 
+#setting CMakePrefix path
+set(Qt5_PREFIX_PATH "${LIBRARY_PATH}/Qt5")
+list(APPEND CMAKE_PREFIX_PATH "${Qt5_PREFIX_PATH}")
