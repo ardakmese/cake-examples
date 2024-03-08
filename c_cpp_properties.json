@@ -63,8 +63,8 @@
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks",
-                "${workspaceFolder}/artifacts/Darwin-universal/Qt5/lib/QtNetwork.framework",
-                "${workspaceFolder}/artifacts/Darwin-universal/Qt5/lib"
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks",
+                "~/Qt/6.3.1/macos/lib/**"
             ],
             "browse": {
                 "path": [
